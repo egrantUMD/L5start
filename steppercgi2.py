@@ -43,7 +43,7 @@ print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#FFFFFF;border:1px;text-align:center"> <br>')
 
-print('<form action="/cgi-bin/steppercgi1.py" method="POST">')
+print('<form action="/cgi-bin/steppercgi2.py" method="POST">')
 
 print('Angle:<br>')
 print('<input type="range" name="slider1" min ="0" max="360" value ="0"/><br>')
