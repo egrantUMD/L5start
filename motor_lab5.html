@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> LAB 4 - LED SWITCH </title>
+</head>
+<body>
+<!-- this parts specifically makes our bacground-->
+<div style="width:600px;background:#FFFFFF;border:1px;text-align:center"> <br>
+
+<form action="/cgi-bin/steppercgi.py" method="POST">
+
+Angle:<br>
+<input type="range" name="slider1" min ="0" max="360" value ="0"/><br>
+Range is from 0 to 360<br>
+<br>
+<input type="submit" name = "mode" value="Submit Angle">
+<input type="submit" name = "mode" value="Zero Motor"> <br>
+<br>
+Motor Angle<br>
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550380/widgets/372919"></iframe> <br>
+<br>
+Motor Angle vs. Time<br>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1550380/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+
+
+</body>
+</form>
+</div>
+</html>
