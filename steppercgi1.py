@@ -21,15 +21,15 @@ file = open('angle.txt', 'w+')
 with open('angle.txt', 'w') as f:
   json.dump(data,f)
 
-api = "2VPFIZ7ZXY6EUC2O" # Enter your API key
-params = {
-1: int(s),
-"api_key":api}
-params = urlencode(params) # reformat dictionary as a GET string
-url = "https://api.thingspeak.com/update?" + params
-response = urlopen(url)
+if m != "Zero Motor":
+  api = "2VPFIZ7ZXY6EUC2O" # Enter your API key
+  params = {1: int(s),
+  "api_key":api}
+  params = urlencode(params) # reformat dictionary as a GET string
+  url = "https://api.thingspeak.com/update?" + params
+  response = urlopen(url)
 
-time.sleep(15.1) 
+  time.sleep(15.1) 
 
 
 
@@ -43,7 +43,7 @@ print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#FFFFFF;border:1px;text-align:center"> <br>')
 
-print('<form action="/cgi-bin/steppercgi.py" method="POST">')
+print('<form action="/cgi-bin/steppercgi1.py" method="POST">')
 
 print('Angle:<br>')
 print('<input type="range" name="slider1" min ="0" max="360" value ="0"/><br>')
