@@ -30,8 +30,16 @@ if m != "Zero Motor":
   response = urlopen(url)
 
   time.sleep(15.1) 
+elif m == "Zero Motor":
+  a = 0
+  api = "2VPFIZ7ZXY6EUC2O" # Enter your API key
+  params = {1: int(a),
+  "api_key":api}
+  params = urlencode(params) # reformat dictionary as a GET string
+  url = "https://api.thingspeak.com/update?" + params
+  response = urlopen(url)
 
-
+  time.sleep(15.1)
 
 
 #This part of the code is meant to make a dynamic website
@@ -43,7 +51,7 @@ print('</head>')
 print('<body>')
 print('<div style="width:600px;background:#FFFFFF;border:1px;text-align:center"> <br>')
 
-print('<form action="/cgi-bin/steppercgi2.py" method="POST">')
+print('<form action="/cgi-bin/steppercgi3.py" method="POST">')
 
 print('Angle:<br>')
 print('<input type="range" name="slider1" min ="0" max="360" value ="0"/><br>')
